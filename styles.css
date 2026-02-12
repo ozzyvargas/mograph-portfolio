@@ -28,35 +28,28 @@
     src: url('./assets/fonts/vend-sans-v1-latin-300italic.woff2') format('woff2');
 }
 
-
-@media only screen and (min-width: 400px) and (max-width: 960px) {
-    #top {
-        background-color: #F7F7F7;
-        height: 25%;
+/*
+@media only screen and (max-width: 960px) {
+    .main-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
     .my-name {
-        font-size: 6rem;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
-    .real-names {
-    font-size: 4rem;
-    letter-spacing: 15px;
-    padding: 0px 20px;
-    font-weight: 100;
-    }
-
-    .nickname {
-        display: block;
-    }
-
-    .about-text {
-        font-family: 'vend-sans';
-        width: 75%;
-        line-height: 2;
-        font-size: 1.125rem;
-        letter-spacing: 1.25px;
-        text-align: left;
+    .nav {
+        align-content: center;
+        height: 50vh;
     }
 
     .nav ul {
@@ -64,13 +57,39 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-size: 45px;
-        padding: 200px 0px;
-        border: 1px solid red;
+        height: 25vh;
     }
-  
+
+    .page-link {
+        background-color: #D9CFC7;
+        color: #222222;
+        border: 1px solid #313647;
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 2rem;
+        padding: 15px;
 }
 
+    .bottom-links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .bottom-page-link {
+        background-color: #D9CFC7;
+        color: #222222;
+        border: 1px solid #313647;
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 1.4rem;
+        padding: 15px;
+}
+
+    #client, #personal, .about-title {
+        text-align: center;
+    }
+
+} */
 
 body {
     font-family: 'Pirata One';
@@ -85,6 +104,7 @@ body {
     background-color: #F7F7F7;
     display: flex;
     justify-content: space-evenly;
+    margin-top: -100px;
 }
 
 .my-name {
@@ -116,9 +136,10 @@ main {
     align-items: center;
 }
 
-.about-title, #client, #course, #personal {
+.about-title, #client, #about, #personal {
     font-size: 3.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .about-text {
@@ -127,57 +148,20 @@ main {
     line-height: 2;
     font-size: 1.125rem;
     letter-spacing: 1.25px;
+    margin: 10px;
+    
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
 }
 
 .ps {
     text-indent: 0px;
     font-size: 0.9rem;
-}
-
-/* nav buttons */
-.nav {
-    width: 75%;
-    margin: 40px;
-}
-
-.page-link {
-    background-color: #D9CFC7;
-    color: #222222;
-    border: 1px solid #313647;
-    text-decoration: none;
-    border-radius: 40px;
-    padding: 20px;
-    position: relative;
-    top: 0;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    width: auto;
-    font-size: 45px;
-    justify-content: space-between;
-}
-
-
-/* client sections design */
-.bio, .nav , .work, .course-work, .personal-work {
-    margin: 50px 50px;
-}
-
-.client-work {
-    width: 100%;
-}
-
-.client-name {
-    font-size: 2.5rem;
-    margin: 20px 0px;
-}
-
-.each-client{
-    text-align: center;
-    font-size: x-large;
-    margin: 20px 0px;
 }
 
 
@@ -197,7 +181,7 @@ main {
 .small-movie, .weird-movie {
     height: 350px;
     position: relative;
-    top: 0; 
+    top: 0;
 }
 
 /* hover shadow and animation */
@@ -212,19 +196,109 @@ main {
     border-radius: 40px;
     margin: 10px 10px;
 }
-.movie:hover, .small-movie:hover, 
+.movie:hover, .small-movie:hover,
 .wide-movie:hover, .weird-movie:hover {
     cursor: pointer;
 }
+
 
 /* back to top button */
 .personal-work {
     padding-bottom: 50px;
 }
 
-.back-to-top {
+#client, .personal-work {
     text-align: center;
+    margin: 75px;
+    font-size: 3.5rem;
+}
+
+.client-name:not(.yaamava) {
     margin-top: 50px;
-    position: relative;
-    top: 0;
+    margin-bottom: 2.5px;
+}
+
+.client-name {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.each-client {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.each-client h3:hover {
+    color: #222222;
+}
+
+
+
+
+.videos {
+    text-align: center;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 55px;
+ }
+
+.bottom-page-link {
+    background-color: #D9CFC7;
+    color: #222222;
+    border: 1px solid #313647;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    padding: 15px;
+}
+
+    .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    padding: 100px;
+}
+.my-name {    margin-bottom: 10px;}
+.real-names {    align-content: center;}
+.nav {    align-content: center;}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 25vh;
+}
+
+.page-link {
+    background-color: #D9CFC7;
+    color: #222222;
+    border: 1px solid #313647;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.top-links-main {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 25px;
+    padding: 5px;
+}
+
+.top-links-sub {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-link {
+    margin-left: 25px;
 }
